@@ -25,6 +25,5 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/web-example-cloud:latest
 
-    - name: Deploy to Render
-      run: |
-          curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}
+    - name: Deploy to render
+      run: curl ${{ secrets.RENDER_DEPLOY_HOOK  }}
